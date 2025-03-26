@@ -1,0 +1,87 @@
+.App {
+
+background-color: rgb(14, 140, 212);
+}
+  
+
+
+
+.ci{
+  height:350px;
+  width: 100%;
+}
+.footer {
+  background-image: url("../src/image/ds2.jpg");
+  background-repeat: no-repeat;
+  background-position:center;
+  background-attachment: local;
+  object-fit: contain;
+  background-size: cover;
+  height: fit-content;
+ 
+}
+.a
+{text-decoration: underline;
+text-emphasis-color: white;
+background-color: black;
+width: 4cm;}
+.card{
+  height: 650px;
+  background-color: rgb(224, 21, 197);
+  border-radius: 45px;
+
+}
+.link {
+  background-color:rgb(224, 21, 197);
+  text-emphasis-color:blue;
+  border-radius: 45px;
+  margin-right: 2cm;
+  padding: 9px;
+ 
+}
+.link:hover {
+  text-emphasis-color: rgb(18, 3, 228);
+  text-decoration: underline;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+nav{
+  padding: 5px;
+ 
+  
+  background-color: rgb(39, 187, 187);
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ img:hover {
+        transform: scale(1.25);
+        transition: 0.9s;
+        transition-duration: 0.25s;
+      }
+.nav-link{
+  background-color: blueviolet;
+  border-radius: 5px;
+  margin-right: 1cm;
+  text-align: right;
+}
