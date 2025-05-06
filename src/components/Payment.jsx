@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom';
+import DeliveryHelper from './DeliveryHelper';
 
 const Payment = () => {
 
@@ -23,7 +24,7 @@ const Payment = () => {
       <h1 className="m-2">Make your payments-lipa na MPESA</h1>
       <div className=" card shaodow col-md-6 p-2">
         <h1 className="text-success">lipa na MPESA</h1>
-        <h3 className="text-secondary">{product.product_name}</h3>
+        <h3 className="text-light"><b>{product.product_name}</b></h3>
         <b className="text-warning">ksh{product.product_cost}</b>
         <form onSubmit={handleSubmit} action="">
           <input
@@ -41,6 +42,7 @@ const Payment = () => {
           </button>
         </form>
       </div>
+      <DeliveryHelper />
     </div>
   );
 }

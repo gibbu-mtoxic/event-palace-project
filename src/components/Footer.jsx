@@ -2,13 +2,14 @@ import React from "react";
 import image from "../image/fb.png";
 import pic from "../image/in.png";
 import twit from "../image/x.png";
+import location from "../image/location.jpeg";
 
 const Footer = () => {
   return (
     <div>
       <section className="row footer">
         <div className="col-md-4">
-          <p className="text-light bg-dark">
+          <p className="text-light ">
             Make Every Event Unforgettable with Our Premium Tents! At
             GibsEvents, we provide top-quality event tents designed for
             elegance, durability, and versatility. Whether you're hosting a
@@ -20,7 +21,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="col-md-4  form shadow p-4 border-solid">
-          <h4 className="text-light bg-dark ">Leave a comment</h4>
+          <h4 className="text-light ">Leave a comment</h4>
           <form action="">
             <textarea
               placeholder="comment"
@@ -38,40 +39,56 @@ const Footer = () => {
           </form>
         </div>
         <div className="col-md-4">
-          <p className="text-light bg-dark">
+          <p className="text-light ">
             Transform any space into a stunning venue with our high-quality
-            event tents.Our stores are open from 6:00am to 8:00pm.
-            Customercare hotline:0782785479
+            event tents.Our stores are open from 6:00am to 8:00pm. Customercare
+            hotline:0782785479
           </p>
-          <a href="">
-            <img src={image} alt="" />
-          </a>
-          <a href="">
-            <img src={pic} alt="" />
-          </a>
-          <a href="">
-            <img src={twit} alt="" />
-          </a>
+          <div>
+            <a href="">
+              <img
+                src={image}
+                alt=""
+                style={{ width: "45px", height: "45px" }}
+              />
+            </a>
+            <a href="">
+              <img src={pic} alt="" style={{ width: "45px", height: "45px" }} />
+            </a>
+            <a href="">
+              <img
+                src={twit}
+                alt=""
+                style={{ width: "45px", height: "45px" }}
+              />
+            </a>
+          </div>
 
-          <div><br />
-            <div className="a">
-              <b >
+          <div>
+            <br />
+            <div className=" row a">
+              
+              <b>
                 <a
                   href="https://www.google.com/maps/place/Haven+Court/@-1.2613553,36.7933093,1070m/data=!3m2!1e3!4b1!4m6!3m5!1s0x182f17693b368f0f:0x13091f14086655c5!8m2!3d-1.2613607!4d36.7958842!16s%2Fg%2F11c5g_94dv?authuser=0&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <h2>Our Location</h2>
+                  <img
+                    src={location}
+                    alt=""
+                    style={{ width: "45px", height: "45px" }}
+                  />
+                  
+                  <h6>Our Location</h6>
                 </a>
               </b>
             </div>
           </div>
         </div>
       </section>
-      <div className=" row bg-info text-light w-100">
-        <p className="col-md-6">
-        Developed and designed by Gibson Igori.
-        </p>
+      <div className=" row text-light w-100">
+        <p className="col-md-6">Developed and designed by Gibson Igori.</p>
         <b className="col-md-6">
           For more information call 0799483599 or email gibsonigori@gmail.com
         </b>

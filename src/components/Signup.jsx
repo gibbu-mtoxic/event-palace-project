@@ -1,8 +1,6 @@
-
 import axios from "axios";
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
-
 
 const Signup = () => {
     const [username, setUsername] = useState("");
@@ -10,11 +8,47 @@ const Signup = () => {
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
     
-
     //feedbacksystem
     const [loading, setLoading] = useState("");
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
+    const [passwordStrength, setPasswordStrength] = useState("");
+
+    // Function to check password strength
+    const checkPasswordStrength = (pwd) => {
+      let strength = 0;
+      if (pwd.length >= 8) strength++;
+      if (/[A-Z]/.test(pwd)) strength++;
+      if (/[a-z]/.test(pwd)) strength++;
+      if (/[0-9]/.test(pwd)) strength++;
+      if (/[^A-Za-z0-9]/.test(pwd)) strength++;
+
+      switch (strength) {
+        case 0:
+        case 1:
+        case 2:
+          return "Weak";
+        case 3:
+        case 4:
+          return "Medium";
+        case 5:
+          return "Strong";
+        default:
+          return "";
+      }
+    };
+
+    // Function to generate a strong password
+    const generatePassword = () => {
+      const length = 12;
+      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+      let generated = "";
+      for (let i = 0, n = charset.length; i < length; ++i) {
+        generated += charset.charAt(Math.floor(Math.random() * n));
+      }
+      setPassword(generated);
+      setPasswordStrength(checkPasswordStrength(generated));
+    };
 
     //fetching data
     const handlesubmit = async (e) => {
@@ -38,6 +72,7 @@ const Signup = () => {
         setLoading("");
       }
     };
+
   return (
     <div className="row justify-content-center mt-4">
       <div className="col-md-6 card shadow p-2 ">
@@ -80,16 +115,28 @@ const Signup = () => {
             }}
           />
           <br />
-          {/**password input */}
-          <input
-            type="password"
-            placeholder="Enter your password"
-            className="form-control"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
+          {/**password input with generator button */}
+          <div className="d-flex align-items-center">
+            <input
+              type="text"
+              placeholder="Enter your password"
+              className="form-control"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setPasswordStrength(checkPasswordStrength(e.target.value));
+              }}
+            />
+            <button
+              type="button"
+              className="btn btn-secondary ms-2"
+              onClick={generatePassword}
+              title="Generate strong password"
+            >
+              Generate
+            </button>
+          </div>
+          <small>Password strength: <strong>{passwordStrength}</strong></small>
           <br />
           <button type="submit" className=" btn bg-primary text-light w-50 ">
             signup

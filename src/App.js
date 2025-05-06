@@ -11,8 +11,8 @@ import AddTent from "./components/AddTent";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import Navbar from "./components/Navbar";
 
+import Username from "./components/Username";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
       <BrowserRouter>
         <br />
         <br />
-      < Navbar/>
         
+        <Username/>
 
         <header className="App-header">
           <Carousel />

@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import d1 from "../image/ds1.png";
 import d2 from "../image/ds2.jpg";
 import d3 from "../image/ds3.jpeg";
+import d4 from "../image/d6.webp";
 
 const Carousel = () => {
     
@@ -43,7 +44,7 @@ const Carousel = () => {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={d1} className=" ci d-block w-100" alt="..." />
+          <img src={d4} className=" ci d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             <h3 >
               Planning an outdoor event? Rain or shine, we've got you

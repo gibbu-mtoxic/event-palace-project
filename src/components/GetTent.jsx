@@ -32,6 +32,7 @@ const GetTent = () => {
     <div className="container-fluid row">
       <h1>Explore our Products</h1>
       <input
+        className="searchbar"
         type="text"
         placeholder="search for products"
         value={searchTerm}
@@ -45,8 +46,10 @@ const GetTent = () => {
               alt={product.product_photo}
             />
             <div className=" cards-container card-body ">
-              <h5 className="mt-2">{product.product_name}</h5>
-              <p className="text-muted">{product.product_description}</p>
+              <h2 className="mt-2 ">
+                <b>{product.product_name}</b>
+              </h2>
+              <p className="text-light">{product.product_description}</p>
               <b className="text-warning">ksh{product.product_cost}</b>
               <br />
               <button

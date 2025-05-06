@@ -1,43 +1,37 @@
 .App {
-
-background-color: rgb(14, 140, 212);
+ background: linear-gradient(90deg, #1e3c72, #064635, #8B4513, #5d3a7d);
+  color: white;
 }
-  
 
+.Dcard {
+  position: center;
+  max-width: 5cm;
+}
 
-
-.ci{
-  height:350px;
+.ci {
+  height: 350px;
   width: 100%;
 }
 .footer {
-  background-image: url("../src/image/ds2.jpg");
-  background-repeat: no-repeat;
-  background-position:center;
-  background-attachment: local;
-  object-fit: contain;
-  background-size: cover;
-  height: fit-content;
+   background: linear-gradient(90deg, #1e3c72, #064635, #8B4513, #5d3a7d);
+  color: white;
  
 }
-.a
-{text-decoration: underline;
-text-emphasis-color: white;
-background-color: black;
-width: 4cm;}
-.card{
-  height: 650px;
-  background-color: rgb(224, 21, 197);
-  border-radius: 45px;
+.a {
+  text-decoration: underline;
+  text-emphasis-color: rgb(8, 205, 231);
 
+  width: 4cm;
+}
+.card {
+   background: linear-gradient(90deg, #1e3c72, #064635, #8B4513, #5d3a7d);
+  color: white;
 }
 .link {
-  background-color:rgb(224, 21, 197);
-  text-emphasis-color:blue;
-  border-radius: 45px;
-  margin-right: 2cm;
-  padding: 9px;
- 
+  text-emphasis-color: rgb(38, 170, 223);
+  border-radius: 20px;
+  margin-right: 0.5cm;
+  padding: 6px;
 }
 .link:hover {
   text-emphasis-color: rgb(18, 3, 228);
@@ -55,13 +49,6 @@ width: 4cm;}
   }
 }
 
-
-nav{
-  padding: 5px;
- 
-  
-  background-color: rgb(39, 187, 187);
-}
 .App-link {
   color: #61dafb;
 }
@@ -74,14 +61,80 @@ nav{
     transform: rotate(360deg);
   }
 }
- img:hover {
-        transform: scale(1.25);
-        transition: 0.9s;
-        transition-duration: 0.25s;
-      }
-.nav-link{
-  background-color: blueviolet;
-  border-radius: 5px;
+img{
+  position: relative;
+  width: 250px;
+  height:250px;
+}
+img:hover {
+  transform: scale(1.15);
+  transition: 0.9s;
+  transition-duration: 0.25s;
+}
+.nav-link {
+  background-color: rgb(157, 48, 221);
+  border-radius: 50px;
   margin-right: 1cm;
   text-align: right;
+
+}
+/* Color mixture of blue, green, brown, and purple as a gradient background */
+body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #064635, #8B4513, #5d3a7d);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #0d1a40;
+}
+
+/* Navbar styling with color mixture */
+.navbar {
+  background: linear-gradient(90deg, #1e3c72, #064635, #8B4513, #5d3a7d);
+  color: white;
+}
+
+.navbar .nav-link, .navbar .navbar-brand, .navbar .btn {
+  color: white !important;
+}
+
+.navbar .nav-link:hover, .navbar .btn:hover {
+  color: #d1c4e9 !important; /* light purple on hover */
+}
+
+/* Card styling to complement the theme */
+.card {
+ background-color: #759622;
+}
+
+/* Buttons with theme colors */
+.btn.bg-primary {
+  background-color: #1e3c72 !important;
+  border-color: #1e3c72 !important;
+  transition: background-color 0.3s ease;
+}
+
+.btn.bg-primary:hover {
+  background-color: #5d3a7d !important;
+  border-color: #5d3a7d !important;
+}
+
+input.form-control {
+  border-radius: 8px;
+  border: 1px solid #064635;
+  transition: border-color 0.3s ease;
+}
+
+input.form-control:focus {
+  border-color: #5d3a7d;
+  box-shadow: 0 0 8px rgba(93, 58, 125, 0.5);
+  outline: none;
+}
+.searchbar{
+  border: solid;
+  border-radius: 45px;
+  border-inline-start-width: 100%;
+  background-color: linear-gradient(90deg, #1e3c72, #064635, #8B4513, #5d3a7d);
 }
